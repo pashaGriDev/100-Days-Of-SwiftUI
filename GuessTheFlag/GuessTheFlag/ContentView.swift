@@ -10,36 +10,31 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        VStack {
-            HStack {
-                Text("1")
-                Text("2")
-                Text("3")
+        ZStack {
+            // цвет который зависит от темного или светлого мода
+//            Color.primary
+//            Color.blue
+//            Color.secondary
+            VStack(spacing: 0) {
+                Color.red
+                Color.blue
             }
-            HStack {
-                Text("4")
-                Text("5")
-                Text("6")
-            }
-            HStack {
-                Text("7")
-                Text("8")
-                Text("9")
-            }
+            Text("Hello world")
+//                .foregroundColor(.secondary)
+                .foregroundStyle(.secondary)
+                .padding(60)
+                .background(.ultraThinMaterial)
         }
+        .ignoresSafeArea()
         
-//        VStack {
-//            Spacer()
-//            Text("first")
-//            Text("second")
-//            Text("third")
-//            Spacer()
-//            Spacer()
-//        }
 //        ZStack {
-//            // рисует по порядку
-//            Text("Hello world") // 1
-//            Text("This is inside a stack") // 2
+//            Color.red
+//            // рамка 200 на 200
+////                .frame(width: 200, height: 200)
+//            // мин ширина 200 макс бесконечно, макс высота 200
+//                .frame(minWidth: 200, maxWidth: .infinity, maxHeight: 200)
+//            Text("Hello world!")
+////                .background(.red)
 //        }
     }
 }
