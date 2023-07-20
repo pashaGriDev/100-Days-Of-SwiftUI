@@ -10,32 +10,16 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        ZStack {
-            // цвет который зависит от темного или светлого мода
-//            Color.primary
-//            Color.blue
-//            Color.secondary
-            VStack(spacing: 0) {
-                Color.red
-                Color.blue
-            }
-            Text("Hello world")
-//                .foregroundColor(.secondary)
-                .foregroundStyle(.secondary)
-                .padding(60)
-                .background(.ultraThinMaterial)
-        }
-        .ignoresSafeArea()
+//        LinearGradient(gradient: Gradient(colors: [.white, .black]), startPoint: .top, endPoint: .bottom)
+            
+//        LinearGradient(gradient: Gradient(stops: [
+//            Gradient.Stop(color: .white, location: 0.45),
+//            Gradient.Stop(color: .black, location: 0.55)
+//        ]), startPoint: .top, endPoint: .bottom)
         
-//        ZStack {
-//            Color.red
-//            // рамка 200 на 200
-////                .frame(width: 200, height: 200)
-//            // мин ширина 200 макс бесконечно, макс высота 200
-//                .frame(minWidth: 200, maxWidth: .infinity, maxHeight: 200)
-//            Text("Hello world!")
-////                .background(.red)
-//        }
+//        RadialGradient(gradient: Gradient(colors: [.blue, .black]), center: .center, startRadius: 20, endRadius: 200)
+        
+        AngularGradient(gradient: Gradient(colors: [.red, .yellow, .blue, .purple, .orange, .red]), center: .center)
     }
 }
 
