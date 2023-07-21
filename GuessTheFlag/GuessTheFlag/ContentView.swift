@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var scoreTitle = ""
     @State private var score = 0
     
+    // Названия совподают с названиями картинок в асетах
     @State private var countries =
     ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland",
      "Russia", "Spain", "UK", "US"].shuffled()
@@ -20,15 +21,17 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Color.indigo
+            LinearGradient(gradient: Gradient(colors: [.blue, .black]), startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
             
             VStack(spacing: 30) {
                 VStack {
                     Text("Tap the flag of")
                         .foregroundColor(.white)
+                        .font(.subheadline.weight(.heavy))
                     Text(countries[correctAnswer])
                         .foregroundColor(.white)
+                        .font(.largeTitle.weight(.semibold))
                 }
                 
                 ForEach(0..<3) { number in
@@ -36,8 +39,10 @@ struct ContentView: View {
                         flagTapped(number)
                     } label: {
                         Image(countries[number])
-                        // уберает выделение синим
+                        // уберает выделение синим когда изображение подсвечено
                             .renderingMode(.original)
+                            .clipShape(Capsule()) // радиус типа каплуса
+                            .shadow(radius: 5)
                     }
                 }
             }
