@@ -12,11 +12,18 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Button("Hello World") {
-                conuseRedText.toggle()
-            }
-            .foregroundColor(conuseRedText ? .red : .blue)
+            Text("Red")
+            // ребенок имеет приоритет
+                .font(.largeTitle.bold())
+            // некоторые модификаторы могут только усиливаться
+                .blur(radius: 3)
+            Text("Blue")
+                .foregroundColor(.red)
+            Text("Green")
         }
+        .font(.title.bold())
+        .blur(radius: 2)
+        .foregroundColor(.blue)
     }
 }
 
