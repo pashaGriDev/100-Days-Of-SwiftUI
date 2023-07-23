@@ -8,22 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var conuseRedText = false
+
+    let labelHello = Text("Hello")
+    let labelWorld = Text("World")
     
-    var body: some View {
+    @ViewBuilder var labels: some View {
         VStack {
-            Text("Red")
-            // ребенок имеет приоритет
-                .font(.largeTitle.bold())
-            // некоторые модификаторы могут только усиливаться
-                .blur(radius: 3)
-            Text("Blue")
-                .foregroundColor(.red)
-            Text("Green")
+            Text("Hello")
+            Text("World")
+                .foregroundColor(.green)
         }
         .font(.title.bold())
-        .blur(radius: 2)
-        .foregroundColor(.blue)
+        .padding()
+        .background(.gray)
+    }
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            CapsuleText(text: "Hello")
+                .foregroundColor(.white)
+            CapsuleText(text: "World")
+                .foregroundColor(.cyan)
+        }
+        .padding()
+        .background(.black)
     }
 }
 
