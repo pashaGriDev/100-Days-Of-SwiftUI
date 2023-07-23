@@ -36,8 +36,7 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationView {
-        // на уроке после добавления NavigationView пикер открывался в новом окне (по типу перехода в навегаторе в новое ВК и обратно)
+        NavigationStack {
             Form {
                 Section {
         // .currency(code: Locale.current.currency?.identifier ?? "USD"
@@ -53,6 +52,7 @@ struct ContentView: View {
                             Text("\($0) people")
                         }
                     }
+                    .pickerStyle(.navigationLink) // открывать в новом окне
                 }
                 
 //                Section {
@@ -74,6 +74,8 @@ struct ContentView: View {
                             Text("\($0)%")
                         }
                     }
+                    .pickerStyle(.navigationLink)
+                    
                 } header: {
                     Text("How much tip do you want to leave?")
                 }
@@ -86,6 +88,7 @@ struct ContentView: View {
                 
                 Section {
                     Text(amountTotal, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                        .foregroundColor(tipPercentage == 0 ? .red : .black)
                 } header: {
                     Text("Amount total")
                 }
