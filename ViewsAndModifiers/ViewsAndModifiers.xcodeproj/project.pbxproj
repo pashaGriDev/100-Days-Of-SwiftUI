@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		100B64582A6D7CD4002AF4AB /* CapsuleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100B64572A6D7CD4002AF4AB /* CapsuleText.swift */; };
+		100B645A2A6D9A9B002AF4AB /* Watermark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100B64592A6D9A9B002AF4AB /* Watermark.swift */; };
 		1095BF972A6C335B00E83548 /* ViewsAndModifiersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1095BF962A6C335B00E83548 /* ViewsAndModifiersApp.swift */; };
 		1095BF992A6C335B00E83548 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1095BF982A6C335B00E83548 /* ContentView.swift */; };
 		1095BF9B2A6C335C00E83548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1095BF9A2A6C335C00E83548 /* Assets.xcassets */; };
@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		100B64572A6D7CD4002AF4AB /* CapsuleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleText.swift; sourceTree = "<group>"; };
+		100B64592A6D9A9B002AF4AB /* Watermark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watermark.swift; sourceTree = "<group>"; };
 		1095BF932A6C335B00E83548 /* ViewsAndModifiers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewsAndModifiers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1095BF962A6C335B00E83548 /* ViewsAndModifiersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsAndModifiersApp.swift; sourceTree = "<group>"; };
 		1095BF982A6C335B00E83548 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			children = (
 				1095BF962A6C335B00E83548 /* ViewsAndModifiersApp.swift */,
 				1095BF982A6C335B00E83548 /* ContentView.swift */,
-				100B64572A6D7CD4002AF4AB /* CapsuleText.swift */,
+				100B64592A6D9A9B002AF4AB /* Watermark.swift */,
 				1095BF9A2A6C335C00E83548 /* Assets.xcassets */,
 				1095BF9C2A6C335C00E83548 /* Preview Content */,
 			);
@@ -142,7 +142,7 @@
 			files = (
 				1095BF992A6C335B00E83548 /* ContentView.swift in Sources */,
 				1095BF972A6C335B00E83548 /* ViewsAndModifiersApp.swift in Sources */,
-				100B64582A6D7CD4002AF4AB /* CapsuleText.swift in Sources */,
+				100B645A2A6D9A9B002AF4AB /* Watermark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

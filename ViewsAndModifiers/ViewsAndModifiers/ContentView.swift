@@ -7,31 +7,43 @@
 
 import SwiftUI
 
-struct ContentView: View {
-
-    let labelHello = Text("Hello")
-    let labelWorld = Text("World")
+struct UserStyle: ViewModifier {
     
-    @ViewBuilder var labels: some View {
-        VStack {
-            Text("Hello")
-            Text("World")
-                .foregroundColor(.green)
-        }
-        .font(.title.bold())
-        .padding()
-        .background(.gray)
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle.bold())
+            .foregroundColor(.orange)
+            .frame(width: 250, height: 100)
+            .background(.black)
+            .padding(3)
+            .background(.green)
+            .padding()
+            .background(.black)
     }
     
+    // как использовать если нет расширеня?
+    // .modifier(UserStyle())
+}
+
+extension View {
+    // более удобный вызов
+    // .userStyle()
+    
+    func userStyle() -> some View {
+        modifier(UserStyle())
+    }
+}
+
+struct ContentView: View {
+    
     var body: some View {
-        VStack(spacing: 20) {
-            CapsuleText(text: "Hello")
-                .foregroundColor(.white)
-            CapsuleText(text: "World")
-                .foregroundColor(.cyan)
+        VStack {
+            Text("Hello World")
+                .userStyle()
+            Color.gray
+                .frame(width: 250, height: 100)
+                .watermark(text: "Made in Chine")
         }
-        .padding()
-        .background(.black)
     }
 }
 
