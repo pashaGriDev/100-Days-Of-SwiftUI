@@ -50,11 +50,12 @@ struct ContentView: View {
                         Button {
                             flagTapped(number)
                         } label: {
-                            Image(countries[number])
-                            // уберает выделение синим когда изображение подсвечено
-                                .renderingMode(.original)
-                                .clipShape(Capsule()) // радиус типа каплуса
-                                .shadow(radius: 5)
+                            FlagImageView(name: countries[number])
+                            
+//                            Image(countries[number])
+//                                .renderingMode(.original)
+//                                .modifier(FlagImage())
+                            
                         }
                     }
                 }
