@@ -7,43 +7,25 @@
 
 import SwiftUI
 
+// TODO: навести красоту на подобии приложения с флагами
+
 struct ContentView: View {
     
-    let items = ["Rock", "Paper", "Scissors"]
     @State private var isWantWin = Bool.random()
     
     @State private var score = 0
     @State private var round = 1
     
-    var randomItem: String {
-        items.randomElement()!
-    }
-    
-    var winItem: String {
-        switch randomItem {
-        case items[0]: return items[1]
-        case items[1]: return items[2]
-        case items[2]: return items[0]
-        default: return "Wrong"
-        }
-    }
-    
+    @State private var randomItem = Item.getRandomItem()
+
     var isWin: Bool {
-        print("равны ли \(randomItem == winItem)? хотим выйграть \(isWantWin)?")
-        return (randomItem == winItem && isWantWin) == isWantWin
+        return (randomItem == randomItem.inverse && isWantWin) == isWantWin
     }
- 
-    var winOrLose: String {
-        isWantWin ? "Win" : "Lose"
-    }
-    
-    let conditions = false
-    
-    
+
     var body: some View {
         VStack {
             Spacer()
-            
+
 //            Text("Items")
             
             Spacer()
@@ -52,7 +34,7 @@ struct ContentView: View {
             Spacer()
             
             HStack {
-                ForEach(items, id: \.self) {item in
+                ForEach(Item.allCases) { item in
                     Button {
                         check(selected: item)
                     } label: {
@@ -66,7 +48,7 @@ struct ContentView: View {
             Spacer()
 
             Group {
-                Text("app selected: \(randomItem), \(winOrLose)")
+                Text("app selected: \(randomItem.rawValue.capitalized), \(isWantWin.toWinOrLose)")
                 Text("score: \(score)")
             }
             
@@ -77,15 +59,25 @@ struct ContentView: View {
         }
     }
     
-    func check(selected item: String) {
+    func check(selected item: Item) {
+        
+        if randomItem == item {
+            // if items is equel
+            return
+        }
         
         round += 1
-        print("\(isWin)")
+
         if isWin {
             score += 1
         }
         
-        isWantWin.toggle()
+        shuffle()
+    }
+    
+    func shuffle() {
+        isWantWin.toggle() // or random
+        randomItem = Item.getRandomItem()
     }
 }
 
