@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-// TODO: навести красоту на подобии приложения с флагами
-
 struct ContentView: View {
     
     @State private var isWantWin = Bool.random()
@@ -17,44 +15,60 @@ struct ContentView: View {
     @State private var round = 1
     
     @State private var randomItem = Item.getRandomItem()
-
+    @State private var showScore = false
+    
     var isWin: Bool {
         return (randomItem == randomItem.inverse && isWantWin) == isWantWin
     }
-
+    
     var body: some View {
-        VStack {
-            Spacer()
-
-//            Text("Items")
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [
+                .FBA1B7, .FFD1DA, .FFDBAA
+            ]), startPoint: .top, endPoint: .bottom)
+            .ignoresSafeArea()
             
-            Spacer()
-            
-            Text("round: \(round)")
-            Spacer()
-            
-            HStack {
-                ForEach(Item.allCases) { item in
-                    Button {
-                        check(selected: item)
-                    } label: {
-                        Text(item.toEmoji)
-                            .foregroundColor(.orange)
+            VStack {
+                Spacer()
+                Text("Challenge day 25")
+                    .font(.largeTitle.bold())
+                Spacer()
+                Text("Round: \(round)")
+                
+                HStack {
+                    ForEach(Item.allCases) { item in
+                        Button {
+                            check(selected: item)
+                        } label: {
+                            Text(item.toEmoji)
+                                .foregroundColor(.orange)
+                        }
+                        
                     }
-
+                    .font(.system(size: 90))
                 }
-                .font(.system(size: 70))
-            }
-            Spacer()
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 60)
+                .background(.regularMaterial)
+                .clipShape(RoundedRectangle(cornerRadius: 40))
+                .padding()
 
-            Group {
-                Text("app selected: \(randomItem.rawValue.capitalized), \(isWantWin.toWinOrLose)")
-                Text("score: \(score)")
+                VStack(spacing: 10) {
+                    Text("tip: \(randomItem.rawValue.capitalized), \(isWantWin.toWinOrLose)")
+                    Text("score: \(score)")
+                }
+                Group {
+                    Spacer()
+                    Spacer()
+                }
             }
+            .font(.title3.bold())
+            .foregroundColor(.secondary)
             
-            Group {
-                Spacer()
-                Spacer()
+            .alert("The End", isPresented: $showScore) {
+                Button("New game", action: reset)
+            } message: {
+                Text("Your score is \(score)")
             }
         }
     }
@@ -67,17 +81,26 @@ struct ContentView: View {
         }
         
         round += 1
-
+        
         if isWin {
             score += 1
         }
         
         shuffle()
+        
+        if round == 10 {
+            showScore = true
+        }
     }
     
     func shuffle() {
         isWantWin.toggle() // or random
         randomItem = Item.getRandomItem()
+    }
+    
+    func reset() {
+        round = 1
+        score = 0
     }
 }
 

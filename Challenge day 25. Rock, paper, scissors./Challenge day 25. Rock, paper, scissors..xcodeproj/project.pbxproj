@@ -14,6 +14,7 @@
 		10407A922A6FFF7B006A4B9F /* CustomFrameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10407A912A6FFF7B006A4B9F /* CustomFrameMode.swift */; };
 		10FB50D02A7122E5009B4F82 /* Bool + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB50CF2A7122E5009B4F82 /* Bool + ext.swift */; };
 		10FB50D22A7124DE009B4F82 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB50D12A7124DE009B4F82 /* Item.swift */; };
+		10FB50D42A71342A009B4F82 /* Color + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB50D32A71342A009B4F82 /* Color + ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		10407A912A6FFF7B006A4B9F /* CustomFrameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFrameMode.swift; sourceTree = "<group>"; };
 		10FB50CF2A7122E5009B4F82 /* Bool + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool + ext.swift"; sourceTree = "<group>"; };
 		10FB50D12A7124DE009B4F82 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		10FB50D32A71342A009B4F82 /* Color + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				10407A832A6FD038006A4B9F /* Challenge_day_25__Rock__paper__scissors_App.swift */,
+				10FB50D32A71342A009B4F82 /* Color + ext.swift */,
 				10407A852A6FD038006A4B9F /* ContentView.swift */,
 				10407A912A6FFF7B006A4B9F /* CustomFrameMode.swift */,
 				10FB50CF2A7122E5009B4F82 /* Bool + ext.swift */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10FB50D02A7122E5009B4F82 /* Bool + ext.swift in Sources */,
+				10FB50D42A71342A009B4F82 /* Color + ext.swift in Sources */,
 				10407A862A6FD038006A4B9F /* ContentView.swift in Sources */,
 				10407A842A6FD038006A4B9F /* Challenge_day_25__Rock__paper__scissors_App.swift in Sources */,
 				10FB50D22A7124DE009B4F82 /* Item.swift in Sources */,
