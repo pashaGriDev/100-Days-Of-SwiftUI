@@ -18,11 +18,22 @@ struct ContentView: View {
 //                in: 1...8,
 //                step: 0.25)
         
-        DatePicker("Pleace enter a date",
-                   selection: $wakeUp,
-                   in: Date.now...) // от сегодня до где-то в будущем
+//        DatePicker("Pleace enter a date",
+//                   selection: $wakeUp,
+//                   in: Date.now...) // от сегодня до где-то в будущем
 //            .labelsHidden() // better way hide label
+        VStack {
+            Text(Date.now, format: .dateTime.hour().minute())
+            Text(Date.now, format: .dateTime.day().month().year())
+            Text(Date.now.formatted(date: .long, time: .omitted))
+        }
         
+    }
+    
+    func trivialExample() {
+        let components = Calendar.current.dateComponents([.hour, .minute], from: Date.now)
+        let hour = components.hour ?? 0
+        let minute = components.minute ?? 0
     }
     
     func exampleDate() {
