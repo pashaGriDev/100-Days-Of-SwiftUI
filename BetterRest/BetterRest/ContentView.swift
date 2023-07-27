@@ -8,39 +8,43 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var sleepAmount = 8.0
     @State private var wakeUp = Date.now
-    
+    @State private var sleepAmount = 8.0
+    @State private var coffeeAmount = 1
+
     var body: some View {
-        
-//        Stepper("\(sleepAmount.formatted()) hours",
-//                value: $sleepAmount,
-//                in: 1...8,
-//                step: 0.25)
-        
-//        DatePicker("Pleace enter a date",
-//                   selection: $wakeUp,
-//                   in: Date.now...) // от сегодня до где-то в будущем
-//            .labelsHidden() // better way hide label
-        VStack {
-            Text(Date.now, format: .dateTime.hour().minute())
-            Text(Date.now, format: .dateTime.day().month().year())
-            Text(Date.now.formatted(date: .long, time: .omitted))
+        NavigationStack {
+            VStack {
+                Text("When do you want to wake up?")
+                    .font(.headline)
+                
+                DatePicker("Pleace enter a time",
+                           selection: $wakeUp,
+                           displayedComponents: .hourAndMinute)
+                    .labelsHidden()
+                
+                Text("Desired amount of sleep")
+                    .font(.headline)
+                
+                Stepper("\(sleepAmount.formatted()) hours",
+                        value: $sleepAmount,
+                        in: 4...12,
+                        step: 0.25)
+                
+                Text("Daily coffe intake")
+                    .font(.headline)
+                
+                Stepper(coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups", value: $coffeeAmount, in: 1...20)
+            }
+            .navigationTitle("BetterRest")
+            .toolbar {
+                Button("Calculate", action: calculateBedtime)
+            }
         }
+    }
+    
+    func calculateBedtime() {
         
-    }
-    
-    func trivialExample() {
-        let components = Calendar.current.dateComponents([.hour, .minute], from: Date.now)
-        let hour = components.hour ?? 0
-        let minute = components.minute ?? 0
-    }
-    
-    func exampleDate() {
-        // сегодня + 1 день (86400 примерно 1 день в сек)
-        let tomorrow = Date.now.addingTimeInterval(86400)
-        // диапазон от сегодня до завтра
-        let range = Date.now...tomorrow
     }
 }
 
