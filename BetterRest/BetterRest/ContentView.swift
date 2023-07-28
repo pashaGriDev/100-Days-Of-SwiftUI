@@ -53,6 +53,12 @@ struct ContentView: View {
                         .font(.headline)
                     
                     Stepper(coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups", value: $coffeeAmount, in: 1...20)
+                    
+//                    Picker("cups", selection: $coffeeAmount) {
+//                        ForEach(1..<21) {
+//                            Text("\($0)")
+//                        }
+//                    }
                 }
             }
             .navigationTitle("BetterRest")
