@@ -35,12 +35,18 @@ struct AddView: View {
                 .keyboardType(.decimalPad)
             }
             .navigationTitle("Add new expense")
+            .toolbar {
+                Button("Save") {
+                    let item = ExpenseItem(name: name, type: type, amount: amount)
+                    expanses.items.append(item)
+                }
+            }
         }
     }
 }
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        AddView(expanses: Expense())
+        AddView(expanses: Expense()) // фиктивое зачение
     }
 }
