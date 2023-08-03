@@ -17,6 +17,7 @@
 		10A681622A7C49CC00EF7A7D /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A681612A7C49CC00EF7A7D /* Bundle-Decodable.swift */; };
 		10A681642A7C4EC800EF7A7D /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A681632A7C4EC800EF7A7D /* Mission.swift */; };
 		10A681662A7C63F100EF7A7D /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A681652A7C63F100EF7A7D /* Color-Theme.swift */; };
+		10A6816A2A7C687400EF7A7D /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A681692A7C687400EF7A7D /* MissionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		10A681612A7C49CC00EF7A7D /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		10A681632A7C4EC800EF7A7D /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		10A681652A7C63F100EF7A7D /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
+		10A681692A7C687400EF7A7D /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			children = (
 				10A6814D2A7BFB3900EF7A7D /* MoonshotApp.swift */,
 				10A6814F2A7BFB3900EF7A7D /* ContentView.swift */,
+				10A681692A7C687400EF7A7D /* MissionView.swift */,
 				10A6815F2A7C495200EF7A7D /* Astronaut.swift */,
 				10A681632A7C4EC800EF7A7D /* Mission.swift */,
 				10A681612A7C49CC00EF7A7D /* Bundle-Decodable.swift */,
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A6816A2A7C687400EF7A7D /* MissionView.swift in Sources */,
 				10A681602A7C495200EF7A7D /* Astronaut.swift in Sources */,
 				10A681662A7C63F100EF7A7D /* Color-Theme.swift in Sources */,
 				10A681502A7BFB3900EF7A7D /* ContentView.swift in Sources */,
