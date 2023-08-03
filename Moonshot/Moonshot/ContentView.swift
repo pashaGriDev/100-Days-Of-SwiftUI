@@ -7,17 +7,30 @@
 
 import SwiftUI
 
+struct CustomText: View {
+    let text: String
+    
+    var body: some View {
+        Text(text)
+    }
+    
+    init(text: String) {
+        self.text = text
+        print("Create a new CustomText")
+    }
+}
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            GeometryReader { geo in
-                Image("cat")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: geo.size.width * 0.9)
-                // второй фрайм выравнивает кадор по центру
-                    .frame(width: geo.size.width, height: geo.size.height)
+        ScrollView(.horizontal) {
+            // ленивый стек который создает элемент когда о появляется на экране
+            LazyHStack(spacing: 10) {
+                ForEach(0..<100) {
+                    CustomText(text: "Item \($0)")
+                        .font(.title)
+                }
             }
+            .frame(maxWidth: .infinity)
         }
     }
 }
