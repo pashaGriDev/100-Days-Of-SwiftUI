@@ -16,18 +16,21 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
     
+    @State private var score = 0
+    
     var body: some View {
         NavigationStack {
             List {
                 Section {
                     TextField("Enter your text", text: $newWord)
                         .textInputAutocapitalization(.never)
+                    Text("Score: \(score)")
                 }
                 
                 Section {
                     ForEach(userWords, id: \.self) { word in
                         HStack {
-                            Image(systemName: "\(word.count).circle")
+                            Image(systemName: "\(word.count - 1).circle")
                             Text(word)
                         }
                     }
@@ -40,6 +43,14 @@ struct ContentView: View {
                 Button("OK", role: .cancel) { }
             } message: {
                 Text(errorMessage)
+            }
+            .toolbar {
+                // кнопка для новой игры
+                Button {
+                    startgame()
+                } label: {
+                    Text("new game")
+                }
             }
         }
     }
@@ -55,11 +66,18 @@ struct ContentView: View {
         
         fatalError("Could not load file start.txt from bundle")
     }
+    // подсчет количества букв и количества слов
+    func calculate() -> Int {
+        userWords.reduce(userWords.count - 1) { $0 + $1.count }
+    }
     
     func addNewWord() {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         
-        guard answer.count > 0 else { return }
+        // ответы короче трех букв
+        guard answer.count > 3 else { return }
+        // ответы которые являются корневым словом
+        guard answer != rootWord else { return }
         
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original")
@@ -80,6 +98,8 @@ struct ContentView: View {
             userWords.insert(newWord, at: 0)
         }
         newWord = ""
+        // подсчет количества букв и количества слов
+        score = calculate()
     }
     
     func isOriginal(word: String) -> Bool {
