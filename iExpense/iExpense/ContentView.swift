@@ -19,48 +19,22 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section {
-                    ForEach(expenses.items) { item in
-                        if item.type == .personal {
-                            HStack {
-                                Text(item.name)
-                                    .font(.headline)
-                                Spacer()
-                                Text(item.amount,
-                                     format:
-                                        .currency(code: Locale.current.currency?.identifier ?? "USD"))
-                                
+                ForEach(TypeExpense.allCases) { type in
+                    Section {
+                        ForEach(expenses.items) { item in
+                            if item.type == type {
+                                ExpenseRow(item: item)
+                                    // задает рядам разные цвета
+                                    .listRowBackground(expenseColor(item.amount))
                             }
-                            // задает рядам разные цвета
-                            .listRowBackground(expenseColor(item.amount))
                         }
+                        // удаление элементов
+                        .onDelete(perform: removeItem)
+                    } header: {
+                        Text("\(type.rawValue.capitalized)")
                     }
-                    .onDelete(perform: removeItem)
-                } header: {
-                    Text(TypeExpense.personal.rawValue.capitalized)
-                }
-                Section {
-                    ForEach(expenses.items) { item in
-                        if item.type == .business {
-                            HStack {
-                                Text(item.name)
-                                    .font(.headline)
-                                Spacer()
-                                Text(item.amount,
-                                     format:
-                                        .currency(code: Locale.current.currency?.identifier ?? "USD"))
-                                
-                            }
-                            // задает рядам разные цвета
-                            .listRowBackground(expenseColor(item.amount))
-                        }
-                    }
-                    .onDelete(perform: removeItem)
-                } header: {
-                    Text(TypeExpense.business.rawValue.capitalized)
                 }
             }
-
             .navigationTitle("iExpanses")
             .toolbar {
                 Button {
