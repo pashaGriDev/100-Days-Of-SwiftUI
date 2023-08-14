@@ -11,30 +11,56 @@ struct ContentView: View {
     @StateObject var expenses = Expense()
     @State private var showingAddExpense = false
     
+    let types = ["Business", "Personal"]
+    
+    
+    @State private var singleSelection: UUID?
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type)
+                Section {
+                    ForEach(expenses.items) { item in
+                        if item.type == .personal {
+                            HStack {
+                                Text(item.name)
+                                    .font(.headline)
+                                Spacer()
+                                Text(item.amount,
+                                     format:
+                                        .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                                
+                            }
+                            // задает рядам разные цвета
+                            .listRowBackground(expenseColor(item.amount))
                         }
-                        
-                        Spacer()
-                        
-                        Text(item.amount,
-                             format:
-                                .currency(code: Locale.current.currency?.identifier ?? "USD"))
-                        
                     }
-                    // задает рядам разные цвета
-                    .listRowBackground(expenseColor(item.amount))
+                    .onDelete(perform: removeItem)
+                } header: {
+                    Text(TypeExpense.personal.rawValue.capitalized)
                 }
-                .onDelete(perform: removeItem)
+                Section {
+                    ForEach(expenses.items) { item in
+                        if item.type == .business {
+                            HStack {
+                                Text(item.name)
+                                    .font(.headline)
+                                Spacer()
+                                Text(item.amount,
+                                     format:
+                                        .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                                
+                            }
+                            // задает рядам разные цвета
+                            .listRowBackground(expenseColor(item.amount))
+                        }
+                    }
+                    .onDelete(perform: removeItem)
+                } header: {
+                    Text(TypeExpense.business.rawValue.capitalized)
+                }
             }
+
             .navigationTitle("iExpanses")
             .toolbar {
                 Button {

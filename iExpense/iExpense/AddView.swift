@@ -12,11 +12,8 @@ struct AddView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var name = ""
-    @State private var type = "Personal"
+    @State private var type: TypeExpense = .personal
     @State private var amount = 0.0
-    
-    let types = ["Business", "Personal"]
-    
     
     var body: some View {
         NavigationStack {
@@ -24,8 +21,8 @@ struct AddView: View {
                 TextField("Name", text: $name)
                 
                 Picker("Type", selection: $type) {
-                    ForEach(types, id: \.self) {
-                        Text($0)
+                    ForEach(TypeExpense.allCases) { type in
+                        Text(type.rawValue.capitalized)
                     }
                 }
                 .pickerStyle(.navigationLink)
