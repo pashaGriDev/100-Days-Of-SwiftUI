@@ -11,11 +11,6 @@ struct ContentView: View {
     @StateObject var expenses = Expense()
     @State private var showingAddExpense = false
     
-    let types = ["Business", "Personal"]
-    
-    
-    @State private var singleSelection: UUID?
-    
     var body: some View {
         NavigationStack {
             List {
