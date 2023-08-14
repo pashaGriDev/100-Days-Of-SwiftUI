@@ -28,7 +28,10 @@ struct ContentView: View {
                         Text(item.amount,
                              format:
                                 .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                        
                     }
+                    // задает рядам разные цвета
+                    .listRowBackground(expenseColor(item.amount))
                 }
                 .onDelete(perform: removeItem)
             }
@@ -50,6 +53,19 @@ struct ContentView: View {
     
     func removeItem(at offsets: IndexSet) {
         expenses.items.remove(atOffsets: offsets)
+    }
+    
+    func expenseColor(_ amout: Double) -> Color {
+        let temp: Color
+        
+        switch amout {
+        case ...10: temp = Color.green
+        case ...100: temp = Color.blue
+        case 101...: temp = Color.red
+        default: temp = Color.white
+        }
+        
+        return temp.opacity(0.2)
     }
 }
 
