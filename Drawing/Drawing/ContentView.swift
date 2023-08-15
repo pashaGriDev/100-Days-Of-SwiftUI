@@ -8,23 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var petalOffset = -20.0
-    @State private var petalWidth = 100.0
+//    @State private var petalOffset = -20.0
+//    @State private var petalWidth = 100.0
     
+    @State private var colorCycle = 0.0
     
     var body: some View {
         VStack {
-            Flower(petalOffset: petalOffset, petalWidth: petalWidth)
-                .fill(.red, style: FillStyle(eoFill: true))
-
-            Text("Offset")
-            Slider(value: $petalOffset, in: -40...40)
-                .padding([.horizontal, .bottom])
-
-            Text("Width")
-            Slider(value: $petalWidth, in: 0...100)
-                .padding(.horizontal)
+            ColorCyclingCircle(amount: colorCycle)
+                .frame(width: 300, height: 300)
+            
+            Slider(value: $colorCycle)
         }
+        
+        
+//        VStack {
+//            Flower(petalOffset: petalOffset, petalWidth: petalWidth)
+//                .fill(.red, style: FillStyle(eoFill: true))
+//
+//            Text("Offset")
+//            Slider(value: $petalOffset, in: -40...40)
+//                .padding([.horizontal, .bottom])
+//
+//            Text("Width")
+//            Slider(value: $petalWidth, in: 0...100)
+//                .padding(.horizontal)
+//        }
     }
 }
 
@@ -35,6 +44,33 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 // MARK: - struct
+
+struct ColorCyclingCircle: View {
+    var amount = 0.1
+    var steps = 100
+
+    var body: some View {
+        ZStack {
+            ForEach(0..<steps) { value in
+                Circle()
+                    .inset(by: Double(value))
+                    .strokeBorder(color(for: value, brightness: 1), lineWidth: 2)
+            }
+        }
+    }
+
+    func color(for value: Int, brightness: Double) -> Color {
+        var targetHue = Double(value) / Double(steps) + amount
+
+        if targetHue > 1 {
+            targetHue -= 1
+        }
+
+        return Color(hue: targetHue, saturation: 1, brightness: brightness)
+    }
+}
+
+// MARK: -
 
 struct Flower: Shape {
 
@@ -59,7 +95,7 @@ struct Flower: Shape {
     }
 }
 
-
+// MARK: -
 
 struct Arc: InsettableShape {
     
