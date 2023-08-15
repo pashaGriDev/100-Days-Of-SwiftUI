@@ -7,6 +7,21 @@
 
 import SwiftUI
 
+struct ColorCircleView: View {
+    
+    @Binding var colorCycle: Double
+    
+    var body: some View {
+        VStack {
+            ColorCyclingCircle(amount: colorCycle)
+                .frame(width: 300, height: 300)
+            
+            Slider(value: $colorCycle)
+        }
+    }
+}
+
+
 struct ColorCyclingCircle: View {
     var amount = 0.1
     var steps = 100

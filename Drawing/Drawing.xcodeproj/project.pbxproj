@@ -15,6 +15,8 @@
 		10F18F342A8BE04C00BC5DCC /* Flower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F18F332A8BE04C00BC5DCC /* Flower.swift */; };
 		10F18F362A8BE08100BC5DCC /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F18F352A8BE08100BC5DCC /* Arc.swift */; };
 		10F18F382A8BE0AA00BC5DCC /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F18F372A8BE0AA00BC5DCC /* Triangle.swift */; };
+		10F18F3A2A8BE2C500BC5DCC /* FlowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F18F392A8BE2C500BC5DCC /* FlowerView.swift */; };
+		10F18F3C2A8BEAB900BC5DCC /* RGBCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F18F3B2A8BEAB900BC5DCC /* RGBCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		10F18F332A8BE04C00BC5DCC /* Flower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flower.swift; sourceTree = "<group>"; };
 		10F18F352A8BE08100BC5DCC /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
 		10F18F372A8BE0AA00BC5DCC /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		10F18F392A8BE2C500BC5DCC /* FlowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerView.swift; sourceTree = "<group>"; };
+		10F18F3B2A8BEAB900BC5DCC /* RGBCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				10F18F312A8BDFD000BC5DCC /* ColorCyclingCircle.swift */,
+				10F18F392A8BE2C500BC5DCC /* FlowerView.swift */,
+				10F18F3B2A8BEAB900BC5DCC /* RGBCircle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,7 +176,9 @@
 				10F18F362A8BE08100BC5DCC /* Arc.swift in Sources */,
 				10F18F382A8BE0AA00BC5DCC /* Triangle.swift in Sources */,
 				10F18F342A8BE04C00BC5DCC /* Flower.swift in Sources */,
+				10F18F3A2A8BE2C500BC5DCC /* FlowerView.swift in Sources */,
 				102274762A8AAD8500B5B50B /* DrawingApp.swift in Sources */,
+				10F18F3C2A8BEAB900BC5DCC /* RGBCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
