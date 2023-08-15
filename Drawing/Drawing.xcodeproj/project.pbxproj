@@ -11,6 +11,10 @@
 		102274782A8AAD8500B5B50B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102274772A8AAD8500B5B50B /* ContentView.swift */; };
 		1022747A2A8AAD8700B5B50B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 102274792A8AAD8700B5B50B /* Assets.xcassets */; };
 		1022747D2A8AAD8700B5B50B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1022747C2A8AAD8700B5B50B /* Preview Assets.xcassets */; };
+		10F18F322A8BDFD000BC5DCC /* ColorCyclingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F18F312A8BDFD000BC5DCC /* ColorCyclingCircle.swift */; };
+		10F18F342A8BE04C00BC5DCC /* Flower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F18F332A8BE04C00BC5DCC /* Flower.swift */; };
+		10F18F362A8BE08100BC5DCC /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F18F352A8BE08100BC5DCC /* Arc.swift */; };
+		10F18F382A8BE0AA00BC5DCC /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F18F372A8BE0AA00BC5DCC /* Triangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		102274772A8AAD8500B5B50B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		102274792A8AAD8700B5B50B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1022747C2A8AAD8700B5B50B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		10F18F312A8BDFD000BC5DCC /* ColorCyclingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCyclingCircle.swift; sourceTree = "<group>"; };
+		10F18F332A8BE04C00BC5DCC /* Flower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flower.swift; sourceTree = "<group>"; };
+		10F18F352A8BE08100BC5DCC /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
+		10F18F372A8BE0AA00BC5DCC /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,8 @@
 		102274742A8AAD8500B5B50B /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
+				10F18F302A8BDFAB00BC5DCC /* Shape */,
+				10F18F2F2A8BDFA500BC5DCC /* View */,
 				102274752A8AAD8500B5B50B /* DrawingApp.swift */,
 				102274772A8AAD8500B5B50B /* ContentView.swift */,
 				102274792A8AAD8700B5B50B /* Assets.xcassets */,
@@ -65,6 +75,24 @@
 				1022747C2A8AAD8700B5B50B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		10F18F2F2A8BDFA500BC5DCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10F18F312A8BDFD000BC5DCC /* ColorCyclingCircle.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		10F18F302A8BDFAB00BC5DCC /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				10F18F332A8BE04C00BC5DCC /* Flower.swift */,
+				10F18F352A8BE08100BC5DCC /* Arc.swift */,
+				10F18F372A8BE0AA00BC5DCC /* Triangle.swift */,
+			);
+			path = Shape;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +166,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				102274782A8AAD8500B5B50B /* ContentView.swift in Sources */,
+				10F18F322A8BDFD000BC5DCC /* ColorCyclingCircle.swift in Sources */,
+				10F18F362A8BE08100BC5DCC /* Arc.swift in Sources */,
+				10F18F382A8BE0AA00BC5DCC /* Triangle.swift in Sources */,
+				10F18F342A8BE04C00BC5DCC /* Flower.swift in Sources */,
 				102274762A8AAD8500B5B50B /* DrawingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
