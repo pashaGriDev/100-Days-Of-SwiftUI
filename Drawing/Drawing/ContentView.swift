@@ -15,10 +15,12 @@ struct ContentView: View {
     @State private var colorCycle = 0.0
     // RGB круги
     @State private var amount = 0.0
+
     
     var body: some View {
-        RGBCircle(amount: $amount)
+        TrapezoidView()
         
+//        RGBCircle(amount: $amount)
 //        ColorCircleView(colorCycle: $colorCycle)
 //        FlowerView(petalOffset: $petalOffset, petalWidth: $petalWidth)
     }
