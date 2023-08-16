@@ -15,11 +15,16 @@ struct ContentView: View {
     @State private var colorCycle = 0.0
     // RGB круги
     @State private var amount = 0.0
+    
+    @State private var rows = 4
+    @State private var columns = 4
 
     
     var body: some View {
-        TrapezoidView()
+        CheckerboardView(rows: $rows, columns: $columns)
+
         
+//        TrapezoidView()
 //        RGBCircle(amount: $amount)
 //        ColorCircleView(colorCycle: $colorCycle)
 //        FlowerView(petalOffset: $petalOffset, petalWidth: $petalWidth)
