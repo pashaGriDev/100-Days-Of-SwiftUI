@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1002972B2A8FBAD3006F54C5 /* TestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002972A2A8FBAD3006F54C5 /* TestUser.swift */; };
+		1002972F2A8FC6B8006F54C5 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002972E2A8FC6B8006F54C5 /* AsyncImageView.swift */; };
 		106CDF362A8E75EA001DABE6 /* CupcakeCornerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CDF352A8E75EA001DABE6 /* CupcakeCornerApp.swift */; };
 		106CDF382A8E75EA001DABE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106CDF372A8E75EA001DABE6 /* ContentView.swift */; };
 		106CDF3A2A8E75EB001DABE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 106CDF392A8E75EB001DABE6 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		1002972A2A8FBAD3006F54C5 /* TestUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUser.swift; sourceTree = "<group>"; };
+		1002972E2A8FC6B8006F54C5 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		106CDF322A8E75EA001DABE6 /* CupcakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		106CDF352A8E75EA001DABE6 /* CupcakeCornerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerApp.swift; sourceTree = "<group>"; };
 		106CDF372A8E75EA001DABE6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				1002972A2A8FBAD3006F54C5 /* TestUser.swift */,
 				106CDF392A8E75EB001DABE6 /* Assets.xcassets */,
 				106CDF3B2A8E75EB001DABE6 /* Preview Content */,
+				1002972E2A8FC6B8006F54C5 /* AsyncImageView.swift */,
 			);
 			path = CupcakeCorner;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 				106CDF382A8E75EA001DABE6 /* ContentView.swift in Sources */,
 				106CDF362A8E75EA001DABE6 /* CupcakeCornerApp.swift in Sources */,
 				1002972B2A8FBAD3006F54C5 /* TestUser.swift in Sources */,
+				1002972F2A8FC6B8006F54C5 /* AsyncImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
