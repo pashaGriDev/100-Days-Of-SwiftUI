@@ -38,6 +38,10 @@ class Order: ObservableObject, Codable {
         if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
             return false
         }
+        // проверка на состоит ли строка только из пробелов
+        if name.isOnlyWithespace || streetAddress.isOnlyWithespace || city.isOnlyWithespace || zip.isOnlyWithespace {
+            return false
+        }
 
         return true
     }
