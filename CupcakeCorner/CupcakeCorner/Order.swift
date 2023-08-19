@@ -37,4 +37,24 @@ class Order: ObservableObject {
 
         return true
     }
+    
+    var cost: Double {
+        // $2 за торт
+        var cost = Double(quantity) * 2
+
+        // сложные торты стоят дороже
+        cost += (Double(type) / 2)
+
+        // $1 с доп глазурью
+        if extraFrosting {
+            cost += Double(quantity)
+        }
+
+        // $0.50 с доп посыпкай
+        if addSprinkles {
+            cost += Double(quantity) / 2
+        }
+
+        return cost
+    }
 }

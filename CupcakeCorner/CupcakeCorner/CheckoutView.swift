@@ -9,32 +9,36 @@ import SwiftUI
 
 struct CheckoutView: View {
     @ObservedObject var order: Order
-
+    
     var body: some View {
-        Form {
-            Section {
-                TextField("Name", text: $order.name)
-                TextField("Street Address", text: $order.streetAddress)
-                TextField("City", text: $order.city)
-                TextField("Zip", text: $order.zip)
-            }
-
-            Section {
-                NavigationLink {
-                    CheckoutView(order: order)
-                } label: {
-                    Text("Check out")
+        ScrollView {
+            VStack {
+                AsyncImage(url: URL(string: "https://hws.dev/img/cupcakes@3x.jpg"),
+                           scale: 3) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                } placeholder: {
+                    ProgressView()
                 }
+                .frame(height: 233)
+                
+                Text("Your total is \(order.cost, format: .currency(code: "USD"))")
+                    .font(.title)
+                
+                Button("Place Order", action: { })
+                    .padding()
             }
-            .disabled(order.hasValidAddress)
         }
-        .navigationTitle("Delivery details")
+        .navigationTitle("Check out")
         .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct CheckoutView_Previews: PreviewProvider {
     static var previews: some View {
-        CheckoutView(order: Order())
+        NavigationView {
+            CheckoutView(order: Order())
+        }
     }
 }
