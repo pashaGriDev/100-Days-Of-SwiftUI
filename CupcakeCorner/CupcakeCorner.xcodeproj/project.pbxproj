@@ -15,6 +15,7 @@
 		106CDF3A2A8E75EB001DABE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 106CDF392A8E75EB001DABE6 /* Assets.xcassets */; };
 		106CDF3D2A8E75EB001DABE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 106CDF3C2A8E75EB001DABE6 /* Preview Assets.xcassets */; };
 		10BA5E272A9155AE002FE4A4 /* String + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA5E262A9155AE002FE4A4 /* String + ext.swift */; };
+		10BA5E292A91628E002FE4A4 /* OrderWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA5E282A91628E002FE4A4 /* OrderWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		106CDF392A8E75EB001DABE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		106CDF3C2A8E75EB001DABE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10BA5E262A9155AE002FE4A4 /* String + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + ext.swift"; sourceTree = "<group>"; };
+		10BA5E282A91628E002FE4A4 /* OrderWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				100297322A8FD5BB006F54C5 /* AddressView.swift */,
 				100297342A8FEDEB006F54C5 /* CheckoutView.swift */,
 				10BA5E262A9155AE002FE4A4 /* String + ext.swift */,
+				10BA5E282A91628E002FE4A4 /* OrderWrapper.swift */,
 			);
 			path = CupcakeCorner;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				10BA5E272A9155AE002FE4A4 /* String + ext.swift in Sources */,
 				100297352A8FEDEB006F54C5 /* CheckoutView.swift in Sources */,
 				106CDF382A8E75EA001DABE6 /* ContentView.swift in Sources */,
+				10BA5E292A91628E002FE4A4 /* OrderWrapper.swift in Sources */,
 				106CDF362A8E75EA001DABE6 /* CupcakeCornerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

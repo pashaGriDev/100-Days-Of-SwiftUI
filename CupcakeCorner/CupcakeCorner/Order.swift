@@ -7,7 +7,68 @@
 
 import SwiftUI
 
-class Order: ObservableObject, Codable {
+
+struct Order: Codable {
+    static let types = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
+    
+    var type = 0
+    var quantity = 3
+
+    var specialRequestEnabled = false {
+        didSet {
+            if specialRequestEnabled == false {
+                extraFrosting = false
+                addSprinkles = false
+            }
+        }
+    }
+    
+    var extraFrosting = false
+    var addSprinkles = false
+    
+    // данные пользователя
+    var name = ""
+    var streetAddress = ""
+    var city = ""
+    var zip = ""
+    
+    var hasValidAddress: Bool {
+        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+            return false
+        }
+        // проверка на состоит ли строка только из пробелов
+        if name.isOnlyWithespace || streetAddress.isOnlyWithespace || city.isOnlyWithespace || zip.isOnlyWithespace {
+            return false
+        }
+
+        return true
+    }
+    
+    var cost: Double {
+        // $2 за торт
+        var cost = Double(quantity) * 2
+
+        // сложные торты стоят дороже
+        cost += (Double(type) / 2)
+
+        // $1 с доп глазурью
+        if extraFrosting {
+            cost += Double(quantity)
+        }
+
+        // $0.50 с доп посыпкай
+        if addSprinkles {
+            cost += Double(quantity) / 2
+        }
+
+        return cost
+    }
+}
+
+
+// MARK: - Код из занятия
+
+class OrderClass: ObservableObject, Codable {
     static let types = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
     
     enum CodingKeys: CodingKey {
