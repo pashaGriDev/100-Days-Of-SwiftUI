@@ -15,9 +15,32 @@ struct ActivityDetail: View {
     
     var body: some View {
         List {
-            Text(item.title)
-            Text(item.description)
-            Stepper("count \(item.completionCount)", value: $item.completionCount, step: 1)
+            Section {
+                Text(item.title)
+                Text(item.description)
+                Text("\(item.completionCount)")
+            }
+            Section {
+                Button {
+                    item.completionCount += 1
+                    update(item)
+                } label: {
+                    HStack {
+                        Spacer()
+                        Text("increment")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                        Spacer()
+                    }
+                }
+            }
+            .listRowBackground(Color.blue)
+        }
+    }
+    
+    func update(_ item: Activity) {
+        if let index = activities.items.firstIndex(where: { $0.id == item.id }) {
+            activities.items[index] = item
         }
     }
 }
