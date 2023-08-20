@@ -9,13 +9,15 @@ import SwiftUI
 
 struct ActivityDetail: View {
     @ObservedObject var activities: Activities
-    var item: Activity
+    @State var item: Activity
+    
+    @State private var count = 0
     
     var body: some View {
         List {
             Text(item.title)
             Text(item.description)
-            Text("\(item.completionCount)")
+            Stepper("count \(item.completionCount)", value: $item.completionCount, step: 1)
         }
     }
 }
