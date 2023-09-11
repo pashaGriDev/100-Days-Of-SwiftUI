@@ -61,12 +61,11 @@
 			children = (
 				10A5DC242AAF2E8F002BCC5D /* BookwormApp.swift */,
 				10A5DC262AAF2E8F002BCC5D /* ContentView.swift */,
+				10D20B102AAFA4AE00ACEF16 /* DataController.swift */,
 				10A5DC282AAF2E91002BCC5D /* Assets.xcassets */,
 				10A5DC2A2AAF2E91002BCC5D /* Preview Content */,
-				10A5DC322AAF2FCE002BCC5D /* PushButton.swift */,
-				10D20B092AAF33E300ACEF16 /* TextEditorView.swift */,
 				10D20B0D2AAFA43B00ACEF16 /* Bookworm.xcdatamodeld */,
-				10D20B102AAFA4AE00ACEF16 /* DataController.swift */,
+				10D20B122AAFAB7F00ACEF16 /* Notes */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";
@@ -77,6 +76,15 @@
 				10A5DC2B2AAF2E91002BCC5D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		10D20B122AAFAB7F00ACEF16 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				10D20B092AAF33E300ACEF16 /* TextEditorView.swift */,
+				10A5DC322AAF2FCE002BCC5D /* PushButton.swift */,
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
