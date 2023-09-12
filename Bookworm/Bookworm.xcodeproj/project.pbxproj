@@ -17,6 +17,7 @@
 		10D20B112AAFA4AE00ACEF16 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D20B102AAFA4AE00ACEF16 /* DataController.swift */; };
 		10D20B142AAFFDC600ACEF16 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D20B132AAFFDC600ACEF16 /* AddBookView.swift */; };
 		10D20B162AB00B5C00ACEF16 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D20B152AB00B5C00ACEF16 /* RatingView.swift */; };
+		10D20B182AB010DA00ACEF16 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D20B172AB010DA00ACEF16 /* EmojiRatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		10D20B102AAFA4AE00ACEF16 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		10D20B132AAFFDC600ACEF16 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		10D20B152AB00B5C00ACEF16 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		10D20B172AB010DA00ACEF16 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				10A5DC2A2AAF2E91002BCC5D /* Preview Content */,
 				10D20B0D2AAFA43B00ACEF16 /* Bookworm.xcdatamodeld */,
 				10D20B132AAFFDC600ACEF16 /* AddBookView.swift */,
+				10D20B172AB010DA00ACEF16 /* EmojiRatingView.swift */,
 				10D20B152AB00B5C00ACEF16 /* RatingView.swift */,
 				10D20B122AAFAB7F00ACEF16 /* Notes */,
 			);
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10D20B142AAFFDC600ACEF16 /* AddBookView.swift in Sources */,
+				10D20B182AB010DA00ACEF16 /* EmojiRatingView.swift in Sources */,
 				10A5DC272AAF2E8F002BCC5D /* ContentView.swift in Sources */,
 				10D20B112AAFA4AE00ACEF16 /* DataController.swift in Sources */,
 				10D20B162AB00B5C00ACEF16 /* RatingView.swift in Sources */,
