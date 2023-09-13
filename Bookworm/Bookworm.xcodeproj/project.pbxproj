@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102036FE2AB16385005915CA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102036FD2AB16385005915CA /* DetailView.swift */; };
 		10A5DC252AAF2E8F002BCC5D /* BookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5DC242AAF2E8F002BCC5D /* BookwormApp.swift */; };
 		10A5DC272AAF2E8F002BCC5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A5DC262AAF2E8F002BCC5D /* ContentView.swift */; };
 		10A5DC292AAF2E91002BCC5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A5DC282AAF2E91002BCC5D /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		102036FD2AB16385005915CA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		10A5DC212AAF2E8F002BCC5D /* Bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A5DC242AAF2E8F002BCC5D /* BookwormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormApp.swift; sourceTree = "<group>"; };
 		10A5DC262AAF2E8F002BCC5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				10A5DC262AAF2E8F002BCC5D /* ContentView.swift */,
 				10D20B102AAFA4AE00ACEF16 /* DataController.swift */,
 				10A5DC282AAF2E91002BCC5D /* Assets.xcassets */,
+				102036FD2AB16385005915CA /* DetailView.swift */,
 				10A5DC2A2AAF2E91002BCC5D /* Preview Content */,
 				10D20B0D2AAFA43B00ACEF16 /* Bookworm.xcdatamodeld */,
 				10D20B132AAFFDC600ACEF16 /* AddBookView.swift */,
@@ -169,6 +172,7 @@
 				10D20B142AAFFDC600ACEF16 /* AddBookView.swift in Sources */,
 				10D20B182AB010DA00ACEF16 /* EmojiRatingView.swift in Sources */,
 				10A5DC272AAF2E8F002BCC5D /* ContentView.swift in Sources */,
+				102036FE2AB16385005915CA /* DetailView.swift in Sources */,
 				10D20B112AAFA4AE00ACEF16 /* DataController.swift in Sources */,
 				10D20B162AB00B5C00ACEF16 /* RatingView.swift in Sources */,
 				10A5DC252AAF2E8F002BCC5D /* BookwormApp.swift in Sources */,

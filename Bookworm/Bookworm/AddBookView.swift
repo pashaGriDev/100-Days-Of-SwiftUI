@@ -14,7 +14,10 @@ struct AddBookView: View {
     @State private var title = ""
     @State private var author = ""
     @State private var rating = 3
-    @State private var genre = ""
+    
+//  "Fantasy" - значение по умолчанию (если пустая строка и значение совподает
+//  с первым Picker вернет пустую строку вместо значения)
+    @State private var genre = "Fantasy"
     @State private var review = ""
     
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
