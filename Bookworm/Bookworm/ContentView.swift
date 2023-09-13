@@ -67,7 +67,7 @@ struct ContentView: View {
     }
     
     func deleteBooks(at offsets: IndexSet) {
-        print(offsets)
+        print(offsets.rangeView)
         
         for offset in offsets {
             let book = books[offset]
@@ -75,7 +75,7 @@ struct ContentView: View {
             moc.delete(book)
         }
 //        сохранить изменения
-        try? moc.save()
+//        try? moc.save()
     }
 }
 
