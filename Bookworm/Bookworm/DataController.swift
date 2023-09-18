@@ -18,7 +18,7 @@ class DataController: ObservableObject {
                 return
             }
             
-//            Политика слияние, только один Гарри Поттер
+//            Политика слияние
             self.container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         }
     }

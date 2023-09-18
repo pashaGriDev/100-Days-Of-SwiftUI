@@ -24,6 +24,8 @@ struct ContentView: View {
                 }
             }
             
+//            shortName - будет уникальным
+//            NSMergePolicy and constraints in CoreDataProject.
             
             Button("Add") {
                 let candy1 = Candy(context: moc)
