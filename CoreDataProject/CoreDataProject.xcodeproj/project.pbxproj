@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103EE55D2AB718E200D14BFE /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103EE55B2AB718E200D14BFE /* Singer+CoreDataClass.swift */; };
+		103EE55E2AB718E200D14BFE /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103EE55C2AB718E200D14BFE /* Singer+CoreDataProperties.swift */; };
+		103EE5602AB71AD800D14BFE /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103EE55F2AB71AD800D14BFE /* FilteredList.swift */; };
 		10A152FD2AB28A3400DD3155 /* CoreDataProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A152FC2AB28A3400DD3155 /* CoreDataProjectApp.swift */; };
 		10A152FF2AB28A3400DD3155 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A152FE2AB28A3400DD3155 /* ContentView.swift */; };
 		10A153012AB28A3500DD3155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A153002AB28A3500DD3155 /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		103EE55B2AB718E200D14BFE /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		103EE55C2AB718E200D14BFE /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		103EE55F2AB71AD800D14BFE /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
 		10A152F92AB28A3400DD3155 /* CoreDataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A152FC2AB28A3400DD3155 /* CoreDataProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProjectApp.swift; sourceTree = "<group>"; };
 		10A152FE2AB28A3400DD3155 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,12 +61,15 @@
 		10A152FB2AB28A3400DD3155 /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				103EE55B2AB718E200D14BFE /* Singer+CoreDataClass.swift */,
+				103EE55C2AB718E200D14BFE /* Singer+CoreDataProperties.swift */,
 				10A152FC2AB28A3400DD3155 /* CoreDataProjectApp.swift */,
 				10A152FE2AB28A3400DD3155 /* ContentView.swift */,
 				10A153002AB28A3500DD3155 /* Assets.xcassets */,
 				10A1530A2AB28B7D00DD3155 /* DataController.swift */,
 				10A1530C2AB28BD400DD3155 /* CoreDataProject.xcdatamodeld */,
 				10A153022AB28A3500DD3155 /* Preview Content */,
+				103EE55F2AB71AD800D14BFE /* FilteredList.swift */,
 			);
 			path = CoreDataProject;
 			sourceTree = "<group>";
@@ -144,9 +153,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				10A152FF2AB28A3400DD3155 /* ContentView.swift in Sources */,
+				103EE55E2AB718E200D14BFE /* Singer+CoreDataProperties.swift in Sources */,
 				10A1530B2AB28B7D00DD3155 /* DataController.swift in Sources */,
+				103EE55D2AB718E200D14BFE /* Singer+CoreDataClass.swift in Sources */,
 				10A1530E2AB28BD400DD3155 /* CoreDataProject.xcdatamodeld in Sources */,
 				10A152FD2AB28A3400DD3155 /* CoreDataProjectApp.swift in Sources */,
+				103EE5602AB71AD800D14BFE /* FilteredList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
