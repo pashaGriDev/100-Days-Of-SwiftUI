@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		103EE5602AB71AD800D14BFE /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103EE55F2AB71AD800D14BFE /* FilteredList.swift */; };
+		107098E02AB80BAA00D49D37 /* Country+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107098DC2AB80BAA00D49D37 /* Country+CoreDataClass.swift */; };
+		107098E12AB80BAA00D49D37 /* Country+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107098DD2AB80BAA00D49D37 /* Country+CoreDataProperties.swift */; };
+		107098E22AB80BAA00D49D37 /* Candy+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107098DE2AB80BAA00D49D37 /* Candy+CoreDataClass.swift */; };
+		107098E32AB80BAA00D49D37 /* Candy+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107098DF2AB80BAA00D49D37 /* Candy+CoreDataProperties.swift */; };
 		10A152FD2AB28A3400DD3155 /* CoreDataProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A152FC2AB28A3400DD3155 /* CoreDataProjectApp.swift */; };
 		10A152FF2AB28A3400DD3155 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A152FE2AB28A3400DD3155 /* ContentView.swift */; };
 		10A153012AB28A3500DD3155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A153002AB28A3500DD3155 /* Assets.xcassets */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		103EE55F2AB71AD800D14BFE /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
+		107098DC2AB80BAA00D49D37 /* Country+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataClass.swift"; sourceTree = "<group>"; };
+		107098DD2AB80BAA00D49D37 /* Country+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		107098DE2AB80BAA00D49D37 /* Candy+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Candy+CoreDataClass.swift"; sourceTree = "<group>"; };
+		107098DF2AB80BAA00D49D37 /* Candy+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Candy+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		10A152F92AB28A3400DD3155 /* CoreDataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A152FC2AB28A3400DD3155 /* CoreDataProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProjectApp.swift; sourceTree = "<group>"; };
 		10A152FE2AB28A3400DD3155 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +65,10 @@
 		10A152FB2AB28A3400DD3155 /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				107098DC2AB80BAA00D49D37 /* Country+CoreDataClass.swift */,
+				107098DD2AB80BAA00D49D37 /* Country+CoreDataProperties.swift */,
+				107098DE2AB80BAA00D49D37 /* Candy+CoreDataClass.swift */,
+				107098DF2AB80BAA00D49D37 /* Candy+CoreDataProperties.swift */,
 				10A152FC2AB28A3400DD3155 /* CoreDataProjectApp.swift */,
 				10A152FE2AB28A3400DD3155 /* ContentView.swift */,
 				10A153002AB28A3500DD3155 /* Assets.xcassets */,
@@ -148,9 +160,13 @@
 			files = (
 				10A152FF2AB28A3400DD3155 /* ContentView.swift in Sources */,
 				10A1530B2AB28B7D00DD3155 /* DataController.swift in Sources */,
+				107098E12AB80BAA00D49D37 /* Country+CoreDataProperties.swift in Sources */,
+				107098E02AB80BAA00D49D37 /* Country+CoreDataClass.swift in Sources */,
 				10A1530E2AB28BD400DD3155 /* CoreDataProject.xcdatamodeld in Sources */,
 				10A152FD2AB28A3400DD3155 /* CoreDataProjectApp.swift in Sources */,
+				107098E32AB80BAA00D49D37 /* Candy+CoreDataProperties.swift in Sources */,
 				103EE5602AB71AD800D14BFE /* FilteredList.swift in Sources */,
+				107098E22AB80BAA00D49D37 /* Candy+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
