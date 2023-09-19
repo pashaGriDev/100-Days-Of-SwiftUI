@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		106072832A7D51E700B93359 /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106072822A7D51E700B93359 /* AstronautView.swift */; };
+		1066B9D52AB9656F0003E66D /* LaunchDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1066B9D42AB9656F0003E66D /* LaunchDateView.swift */; };
 		10A6814E2A7BFB3900EF7A7D /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6814D2A7BFB3900EF7A7D /* MoonshotApp.swift */; };
 		10A681502A7BFB3900EF7A7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6814F2A7BFB3900EF7A7D /* ContentView.swift */; };
 		10A681522A7BFB3B00EF7A7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A681512A7BFB3B00EF7A7D /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		106072822A7D51E700B93359 /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
+		1066B9D42AB9656F0003E66D /* LaunchDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDateView.swift; sourceTree = "<group>"; };
 		10A6814A2A7BFB3900EF7A7D /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A6814D2A7BFB3900EF7A7D /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		10A6814F2A7BFB3900EF7A7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +50,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1066B9D02AB95E5D0003E66D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				10A6815C2A7C45EC00EF7A7D /* astronauts.json */,
+				10A6815B2A7C45EC00EF7A7D /* missions.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1066B9D12AB95EC30003E66D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				10A681612A7C49CC00EF7A7D /* Bundle-Decodable.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		1066B9D22AB95EE90003E66D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				106072822A7D51E700B93359 /* AstronautView.swift */,
+				10A6814F2A7BFB3900EF7A7D /* ContentView.swift */,
+				10A681692A7C687400EF7A7D /* MissionView.swift */,
+				1066B9D42AB9656F0003E66D /* LaunchDateView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1066B9D32AB95EF70003E66D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				10A6815F2A7C495200EF7A7D /* Astronaut.swift */,
+				10A681632A7C4EC800EF7A7D /* Mission.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		10A681412A7BFB3900EF7A7D = {
 			isa = PBXGroup;
 			children = (
@@ -68,14 +107,10 @@
 			isa = PBXGroup;
 			children = (
 				10A6814D2A7BFB3900EF7A7D /* MoonshotApp.swift */,
-				10A6814F2A7BFB3900EF7A7D /* ContentView.swift */,
-				10A681692A7C687400EF7A7D /* MissionView.swift */,
-				106072822A7D51E700B93359 /* AstronautView.swift */,
-				10A6815F2A7C495200EF7A7D /* Astronaut.swift */,
-				10A681632A7C4EC800EF7A7D /* Mission.swift */,
-				10A681612A7C49CC00EF7A7D /* Bundle-Decodable.swift */,
-				10A6815C2A7C45EC00EF7A7D /* astronauts.json */,
-				10A6815B2A7C45EC00EF7A7D /* missions.json */,
+				1066B9D22AB95EE90003E66D /* View */,
+				1066B9D32AB95EF70003E66D /* Model */,
+				1066B9D12AB95EC30003E66D /* Helper */,
+				1066B9D02AB95E5D0003E66D /* Resources */,
 				10A681512A7BFB3B00EF7A7D /* Assets.xcassets */,
 				10A681532A7BFB3B00EF7A7D /* Preview Content */,
 				10A681652A7C63F100EF7A7D /* Color-Theme.swift */,
@@ -170,6 +205,7 @@
 				10A681502A7BFB3900EF7A7D /* ContentView.swift in Sources */,
 				10A6814E2A7BFB3900EF7A7D /* MoonshotApp.swift in Sources */,
 				10A681642A7C4EC800EF7A7D /* Mission.swift in Sources */,
+				1066B9D52AB9656F0003E66D /* LaunchDateView.swift in Sources */,
 				10A681622A7C49CC00EF7A7D /* Bundle-Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

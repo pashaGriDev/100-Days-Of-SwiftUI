@@ -25,6 +25,9 @@ struct MissionView: View {
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.6)
                         .padding(.top)
+
+                    LaunchDateView(date: mission.launchDate)
+                        .padding(.top, 5)
                     
 //                    Divider() // разделитель
                     
